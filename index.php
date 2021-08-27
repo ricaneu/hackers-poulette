@@ -11,7 +11,12 @@
     <link rel="icon" type="image/png" href="hackers-poulette-logo.png">
 </head>
 <body>
-<img src="hackers-poulette-logo.png" alt="Hackers Poulette logo">
+<div class="container">
+<div class="row"> 
+<div class="col-sm-8">
+
+<img src="hackers-poulette-logo.png" alt="Hackers Poulette logo"></div>
+<div class="col-sm-4">
     <?php
     //this is data handling part
     if (!empty ($_POST)) {
@@ -59,7 +64,7 @@ if (!empty ($_POST) && empty ($error)) {
     $subject = "subject";
     $mailheader = "From: $email \r\n";
     mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-    $a = "Thank You for your message! We will contact you as soon as possible" . " -" . "<a href='form.html' style='text-decoration:none;color:#0d8187;'> Return Home</a>";
+    $a = "Thank You for your message! We will contact you as soon as possible" . " -" . "<a href='https://www.rd.com/jokes/computer/' style='text-decoration:none;color:#0d8187;'> Return Home</a>";
     print_r ($a);
 }
 else {
@@ -68,26 +73,38 @@ else {
 //I place it between the input tags.
 ?>
     <script src="contactform.js" id="form"></script>
+    <script src="bootstrap.min.js"></script>
     <form action="index.php" method="POST">
+
         <p>Name, Last name</p>
+        <div class="text-danger"> <!-- danger colors target text red; primary is blue, secondary is gray, success is green, warning is yellow -->
         <?php
         echo $error["name"];
         ?>
+       </div>
         <input type="text" name="name" value="<?php echo $name; ?>" >
         <p>Gender</p>
+        <div class="text-danger">
         <?php
         echo $error["gender"];
-        ?> <input type="text" name="gender" value="<?php echo $gender; ?>" >
+        ?>
+        </div> 
+        <input type="text" name="gender" value="<?php echo $gender; ?>" >
         <p>Email</p>
+        <div class="text-danger">
+        </div>
         <?php
         if (!empty($error["email"])) {    //executes only when this field has an error
         echo "<p class='danger'>".$error["email"]."</p>"; // we add message with class which will be styled in CSS (add properties to this error)
     }
         ?> <input type="text" name="email" value="<?php echo $email; ?>" >
         <p>Country</p>
+        <div class="text-danger">
         <?php
         echo $error["country"];
-        ?> <input type="text" name="country" value="<?php echo $country; ?>" >
+        ?> 
+        </div>
+        <input type="text" name="country" value="<?php echo $country; ?>" >
         
         <p>Subject</p>
         <select name="type" size="1"  class="form-select">
@@ -99,18 +116,23 @@ else {
         <br />
         
         <p>Message</p>
+        <div class="text-danger">
         <?php
         echo $error["message"];
         ?>
+        </div>
         <textarea name="message" rows="6" cols="25"><?php echo $message; ?></textarea>
         <br />
-        <input type="submit" value="Send"><input type="reset" value="Clear">
+        <input type="submit" value="Send" class="button btn btn-success">
+        <input type="reset" value="Clear" class="button btn btn-warning">
         </form>
 
 
         <?php
 }
         ?>
-        
+        </div>
+   </div>     
+</div>        
 </body>
 </html>
