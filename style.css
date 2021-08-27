@@ -20,6 +20,9 @@ form{
     align-items: center;
     justify-content: center;
   }
+  .error{
+    color: red;
+  }
   ::selection{
     color: #FFF;
     background: #303030;
