@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="hackers-poulette-logo.png">
 </head>
 <body>
+<img src="hackers-poulette-logo.png" alt="Hackers Poulette logo">
     <?php
     //this is data handling part
     if (!empty ($_POST)) {
