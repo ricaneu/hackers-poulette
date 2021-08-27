@@ -103,6 +103,10 @@ feedback for the user.
 - [class mailer](https://github.com/PHPMailer/PHPMailer)
 
 ### Links
+https://www.php.net/manual/en/function.htmlspecialchars.php
+https://www.php.net/manual/en/function.error-reporting.php
+https://www.php.net/manual/en/function.mail.php
+
 
 - [Honey](https://www.thryv.com/blog/honeypot-technique/)
 - [Ajax](https://www.javatpoint.com/ajax-tutorial)
