@@ -12,11 +12,31 @@
 </head>
 <body>
 <div class="container">
+<div class="row">
+<div class="col-sm-12">
+<ul class="nav justify-content-center">
+<li class="nav-item">
+    <a class="nav-link" href="https://www.rd.com/jokes/computer/">Main</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.rd.com/jokes/computer/">Products</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active text-warning" aria-current="page" href="#">Contact form</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Members only</a>
+  </li>
+</ul>
+</div>
+</div>
+
 <div class="row"> 
-<div class="col-sm-8">
+
+<div class="col-sm-12 col-md-6 col-lg-8"> <!--responsive view-->
 
 <img src="hackers-poulette-logo.png" alt="Hackers Poulette logo"></div>
-<div class="col-sm-4">
+<div class="col-sm-12 col-md-6 col-lg-4"> <!--responsive view-->
     <?php
     //this is data handling part
     if (!empty ($_POST)) {
@@ -74,7 +94,7 @@ else {
 ?>
     <script src="contactform.js" id="form"></script>
     <script src="bootstrap.min.js"></script>
-    <form action="index.php" method="POST">
+    <form action="index.php" name="form" method="POST" onsubmit="return validateForm()"> <!--js validation-->
 
         <p>Name, Last name</p>
         <div class="text-danger"> <!-- danger colors target text red; primary is blue, secondary is gray, success is green, warning is yellow -->
