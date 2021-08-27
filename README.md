@@ -108,6 +108,7 @@ https://www.php.net/manual/en/function.error-reporting.php
 https://www.php.net/manual/en/function.mail.php
 https://getbootstrap.com/docs/5.1/layout/grid/
 https://getbootstrap.com/docs/5.1/components/navs-tabs/
+https://www.w3schools.com/js/js_validation.asp
 
 
 
